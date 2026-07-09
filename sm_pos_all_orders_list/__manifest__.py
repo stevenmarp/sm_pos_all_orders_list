@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     "name": "POS All Orders List",
-    "version": "16.0.1.0.0",
+    "version": "15.0.1.0.0",
     "category": "Point of Sale",
     "summary": "Search & list all POS orders, search by customer/receipt, and choose how many past orders to preload.",
     "description": """
@@ -26,6 +26,8 @@ and choose how many past orders to preload, directly within the running POS sess
     "assets": {
         "point_of_sale.assets": [
             "sm_pos_all_orders_list/static/src/control_buttons/all_orders_button.js",
+        ],
+        "web.assets_qweb": [
             "sm_pos_all_orders_list/static/src/control_buttons/all_orders_button.xml",
         ],
     },

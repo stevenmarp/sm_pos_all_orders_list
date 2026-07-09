@@ -4,11 +4,11 @@ odoo.define('sm_pos_all_orders_list.AllOrdersButton', function (require) {
     const PosComponent = require('point_of_sale.PosComponent');
     const ProductScreen = require('point_of_sale.ProductScreen');
     const Registries = require('point_of_sale.Registries');
-    const { useListener } = require("@web/core/utils/hooks");
+    const { useListener } = require('web.custom_hooks');
 
     class AllOrdersButton extends PosComponent {
-        setup() {
-            super.setup();
+        constructor() {
+            super(...arguments);
             useListener('click', this._onClick);
         }
         _onClick() {

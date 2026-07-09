@@ -1,23 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <record id="res_config_settings_view_form_pos_orders" model="ir.ui.view">
-        <field name="name">res.config.settings.view.form.inherit.pos.orders</field>
-        <field name="model">res.config.settings</field>
-        <field name="inherit_id" ref="point_of_sale.res_config_settings_view_form"/>
+    <record id="pos_config_view_form_inherit_pos_orders" model="ir.ui.view">
+        <field name="name">pos.config.form.view.inherit.pos.orders</field>
+        <field name="model">pos.config</field>
+        <field name="inherit_id" ref="point_of_sale.pos_config_view_form"/>
         <field name="arch" type="xml">
-            <xpath expr="//div[@id='pos_interface_section']" position="after">
-                <div class="col-12 col-lg-6 o_setting_box" id="pos_all_orders_setting">
-                    <div class="o_setting_right_pane">
-                        <span class="o_form_label">POS All Orders List</span>
-                        <div class="text-muted">
-                            Select among the given options to load orders that you wish to load in current POS Session
-                        </div>
-                        <div class="content-group mt16">
-                            <field name="pos_order_load_type" widget="radio"/>
-                        </div>
-                        <div class="content-group mt16" attrs="{'invisible': [('pos_order_load_type', '!=', 'days')]}">
-                            <label for="pos_order_load_days" string="Number of days" class="o_light_label"/>
-                            <field name="pos_order_load_days" class="oe_inline"/>
+            <xpath expr="//sheet" position="inside">
+                <h2>POS All Orders List</h2>
+                <div class="row mt16 o_settings_container">
+                    <div class="col-12 col-lg-6 o_setting_box" id="pos_order_load_type_setting">
+                        <div class="o_setting_right_pane">
+                            <span class="o_form_label">Loading Options</span>
+                            <div class="text-muted">
+                                Choose which orders to preload into the running POS session
+                            </div>
+                            <div class="content-group mt16">
+                                <field name="pos_order_load_type" widget="radio"/>
+                            </div>
+                            <div class="content-group mt16" attrs="{'invisible': [('pos_order_load_type', '!=', 'days')]}">
+                                <label for="pos_order_load_days" string="Number of days" class="o_light_label"/>
+                                <field name="pos_order_load_days" class="oe_inline"/>
+                            </div>
                         </div>
                     </div>
                 </div>
