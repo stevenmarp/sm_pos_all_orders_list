@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     "name": "POS All Orders List",
-    "version": "18.0.1.0.0",
+    "version": "19.0.1.0.0",
     "category": "Point of Sale",
     "summary": "Search & list all POS orders, search by customer/receipt, and choose how many past orders to preload.",
     "description": """

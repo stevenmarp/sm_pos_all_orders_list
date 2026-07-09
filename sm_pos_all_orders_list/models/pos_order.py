@@ -8,9 +8,8 @@ class PosOrder(models.Model):
     _inherit = 'pos.order'
 
     @api.model
-    def _load_pos_data_domain(self, data):
-        domain = super()._load_pos_data_domain(data)
-        config = self.env['pos.config'].browse(data['pos.config']['data'][0]['id'])
+    def _load_pos_data_domain(self, data, config):
+        domain = super()._load_pos_data_domain(data, config)
         if config.pos_order_load_type == 'current':
             return domain
         past = [('state', '!=', 'draft'), ('config_id', '=', config.id)]
