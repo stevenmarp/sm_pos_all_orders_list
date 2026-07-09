@@ -12,9 +12,7 @@ odoo.define('sm_pos_all_orders_list.AllOrdersButton', function (require) {
             useListener('click', this._onClick);
         }
         _onClick() {
-            this.showScreen('TicketScreen', {
-                ui: { filter: 'SYNCED' },
-            });
+            this.showScreen('OrderManagementScreen');
         }
     }
     AllOrdersButton.template = 'sm_pos_all_orders_list.AllOrdersButton';
