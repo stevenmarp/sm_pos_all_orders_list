@@ -1,10 +1,32 @@
-import { ControlButtons } from "@point_of_sale/app/screens/product_screen/control_buttons/control_buttons";
-import { patch } from "@web/core/utils/patch";
+odoo.define('sm_pos_all_orders_list.AllOrdersButton', function (require) {
+    'use strict';
 
-patch(ControlButtons.prototype, {
-    clickAllOrders() {
-        this.pos.showScreen("TicketScreen", {
-            stateOverride: { filter: "SYNCED", search: {} },
-        });
-    },
+    const PosComponent = require('point_of_sale.PosComponent');
+    const ProductScreen = require('point_of_sale.ProductScreen');
+    const Registries = require('point_of_sale.Registries');
+    const { useListener } = require("@web/core/utils/hooks");
+
+    class AllOrdersButton extends PosComponent {
+        setup() {
+            super.setup();
+            useListener('click', this._onClick);
+        }
+        _onClick() {
+            this.showScreen('TicketScreen', {
+                ui: { filter: 'SYNCED' },
+            });
+        }
+    }
+    AllOrdersButton.template = 'sm_pos_all_orders_list.AllOrdersButton';
+
+    ProductScreen.addControlButton({
+        component: AllOrdersButton,
+        condition: function () {
+            return true;
+        },
+    });
+
+    Registries.Component.add(AllOrdersButton);
+
+    return AllOrdersButton;
 });

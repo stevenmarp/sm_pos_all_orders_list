@@ -5,18 +5,22 @@
         <field name="model">res.config.settings</field>
         <field name="inherit_id" ref="point_of_sale.res_config_settings_view_form"/>
         <field name="arch" type="xml">
-            <xpath expr="//block[@id='pos_interface_section']" position="after">
-                <block title="POS All Orders List" id="pos_all_orders_section"
-                       help="Select among the given options to load orders that you wish to load in current POS Session">
-                    <setting id="pos_order_load_type_setting" string="Loading Options"
-                             help="Choose which orders to preload into the running POS session">
-                        <field name="pos_order_load_type" widget="radio"/>
-                        <div class="mt-2" invisible="pos_order_load_type != 'days'">
-                            <label for="pos_order_load_days" string="Number of days"/>
+            <xpath expr="//div[@id='pos_interface_section']" position="after">
+                <div class="col-12 col-lg-6 o_setting_box" id="pos_all_orders_setting">
+                    <div class="o_setting_right_pane">
+                        <span class="o_form_label">POS All Orders List</span>
+                        <div class="text-muted">
+                            Select among the given options to load orders that you wish to load in current POS Session
+                        </div>
+                        <div class="content-group mt16">
+                            <field name="pos_order_load_type" widget="radio"/>
+                        </div>
+                        <div class="content-group mt16" attrs="{'invisible': [('pos_order_load_type', '!=', 'days')]}">
+                            <label for="pos_order_load_days" string="Number of days" class="o_light_label"/>
                             <field name="pos_order_load_days" class="oe_inline"/>
                         </div>
-                    </setting>
-                </block>
+                    </div>
+                </div>
             </xpath>
         </field>
     </record>
