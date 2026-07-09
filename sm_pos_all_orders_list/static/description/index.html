@@ -1,0 +1,146 @@
+<div class="container" style="font-family:Arial, Helvetica, sans-serif; color:#1f2937;">
+    <!-- Overview Section -->
+    <section class="row flex-column p-4 bg-light shadow" style="margin-bottom:40px; border-radius:20px;">
+        <div class="row flex-column mb-5 text-center">
+            <h3 style="color:#0E2D59; font-size:28px; font-family:system-ui; font-weight:700;">POS All Orders Search & List</h3>
+            <div class="col-lg-9 col-11 mx-auto mt-3" style="font-size:16px; color:#555;">
+                View past POS orders, search by customer or receipt reference, and choose how many past orders to preload, directly within the running POS session.
+            </div>
+        </div>
+
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-10 col-11 text-center">
+                <div style="width:fit-content; margin:0 auto 14px; padding:4px 12px; color:#ffffff; background:#16a34a; border-radius:20px; font-size:12px; font-weight:700;">
+                    Key Features
+                </div>
+            </div>
+        </div>
+
+        <div class="row no-gutters justify-content-center mb-4 px-3">
+            <div class="col-lg-4 col-md-6 col-12 p-2">
+                <div class="h-100 p-4 text-center bg-white shadow-sm" style="border-radius:8px;">
+                    <h4 style="color:#0E2D59; font-size:20px; font-weight:600;">Flexible Loading Options</h4>
+                    <p style="font-size:14px; color:#555;">Configure POS to load orders of the current session, load all past orders, or load orders of the last 'n' days.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12 p-2">
+                <div class="h-100 p-4 text-center bg-white shadow-sm" style="border-radius:8px;">
+                    <h4 style="color:#0E2D59; font-size:20px; font-weight:600;">Quick Search</h4>
+                    <p style="font-size:14px; color:#555;">Effortlessly search for any past order using the customer's name, date, or order/receipt reference number.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12 p-2">
+                <div class="h-100 p-4 text-center bg-white shadow-sm" style="border-radius:8px;">
+                    <h4 style="color:#0E2D59; font-size:20px; font-weight:600;">Ticket Screen Integration</h4>
+                    <p style="font-size:14px; color:#555;">Click the "All Orders" button inside POS Actions menu to open Odoo's native Ticket Screen with pre-filtered synced orders.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Access Section -->
+    <section class="row flex-column p-4 bg-light shadow" style="margin-bottom:40px; border-radius:20px;">
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-10 col-11 text-center">
+                <div style="width:fit-content; margin:0 auto 14px; padding:4px 12px; color:#ffffff; background:#16a34a; border-radius:20px; font-size:12px; font-weight:700;">
+                    How to Access
+                </div>
+                <div style="font-size:15px; color:#555; margin-bottom: 20px;">
+                    In the POS main interface, click the <strong>Actions</strong> button to display remaining control options, then choose the <strong>All Orders</strong> button.
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center px-3 mb-4">
+            <div class="col-lg-10 col-12 text-center">
+                <img src="pos_main_screen.png" class="img-fluid shadow-sm" style="border-radius:8px; border:1px solid #ddd; max-width:100%;" alt="Accessing All Orders via Actions button on POS screen"/>
+            </div>
+        </div>
+        <div class="row justify-content-center px-3 mb-4">
+            <div class="col-lg-6 col-12 text-center">
+                <img src="pos_actions_menu.png" class="img-fluid shadow-sm" style="border-radius:8px; border:1px solid #ddd; max-width:100%;" alt="POS Actions Menu showing All Orders button"/>
+            </div>
+        </div>
+        <div class="row justify-content-center px-3">
+            <div class="col-lg-6 col-12 text-center">
+                <img src="pos_cart_actions_button.png" class="img-fluid shadow-sm" style="border-radius:8px; border:1px solid #ddd; max-width:100%;" alt="POS Cart view and Actions button placement"/>
+            </div>
+        </div>
+    </section>
+
+    <!-- Option 1: Load Current Session -->
+    <section class="row flex-column p-4 bg-light shadow" style="margin-bottom:40px; border-radius:20px;">
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-10 col-11 text-center">
+                <div style="width:fit-content; margin:0 auto 14px; padding:4px 12px; color:#ffffff; background:#16a34a; border-radius:20px; font-size:12px; font-weight:700;">
+                    Option 1: Load Orders of Current Session
+                </div>
+                <div style="font-size:15px; color:#555; margin-bottom: 20px;">
+                    Preload and list only the orders that belong to the current active session. Keeps the POS light and focused on the current shift's transactions.
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center px-3 mb-4">
+            <div class="col-lg-10 col-12 text-center">
+                <img src="settings_load_current_session.png" class="img-fluid shadow-sm" style="border-radius:8px; border:1px solid #ddd; max-width:100%;" alt="Setting to Load Orders of Current Session"/>
+            </div>
+        </div>
+        <div class="row justify-content-center px-3">
+            <div class="col-lg-10 col-12 text-center">
+                <img src="ticket_load_current_session.png" class="img-fluid shadow-sm" style="border-radius:8px; border:1px solid #ddd; max-width:100%;" alt="POS Ticket Screen displaying only current session orders"/>
+            </div>
+        </div>
+    </section>
+
+    <!-- Option 2: Load All Past Orders -->
+    <section class="row flex-column p-4 bg-light shadow" style="margin-bottom:40px; border-radius:20px;">
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-10 col-11 text-center">
+                <div style="width:fit-content; margin:0 auto 14px; padding:4px 12px; color:#ffffff; background:#16a34a; border-radius:20px; font-size:12px; font-weight:700;">
+                    Option 2: Load All Past Orders
+                </div>
+                <div style="font-size:15px; color:#555; margin-bottom: 20px;">
+                    Preload all historical orders from the system database. Allows you to search and view any past order, regardless of which session or cashier completed it.
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center px-3 mb-4">
+            <div class="col-lg-10 col-12 text-center">
+                <img src="settings_load_all_past_orders.png" class="img-fluid shadow-sm" style="border-radius:8px; border:1px solid #ddd; max-width:100%;" alt="Setting to Load All Past Orders"/>
+            </div>
+        </div>
+        <div class="row justify-content-center px-3">
+            <div class="col-lg-10 col-12 text-center">
+                <img src="ticket_load_all_past_orders.png" class="img-fluid shadow-sm" style="border-radius:8px; border:1px solid #ddd; max-width:100%;" alt="POS Ticket Screen displaying all historical orders in system"/>
+            </div>
+        </div>
+    </section>
+
+    <!-- Option 3: Load Orders of Last 'n' Days -->
+    <section class="row flex-column p-4 bg-light shadow" style="margin-bottom:40px; border-radius:20px;">
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-10 col-11 text-center">
+                <div style="width:fit-content; margin:0 auto 14px; padding:4px 12px; color:#ffffff; background:#16a34a; border-radius:20px; font-size:12px; font-weight:700;">
+                    Option 3: Load Orders of Last 'n' Days
+                </div>
+                <div style="font-size:15px; color:#555; margin-bottom: 20px;">
+                    Restrict the preloaded historical orders to a specific number of days. Useful for limiting POS memory usage while still maintaining access to recent past orders.
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center px-3 mb-4">
+            <div class="col-lg-10 col-12 text-center">
+                <img src="settings_load_last_n_days.png" class="img-fluid shadow-sm" style="border-radius:8px; border:1px solid #ddd; max-width:100%;" alt="Setting to Load Orders of Last 'n' Days"/>
+            </div>
+        </div>
+        <div class="row justify-content-center px-3 mb-4">
+            <div class="col-lg-10 col-12 text-center">
+                <img src="ticket_load_last_n_days.png" class="img-fluid shadow-sm" style="border-radius:8px; border:1px solid #ddd; max-width:100%;" alt="POS Ticket Screen displaying only orders from the last 'n' days"/>
+            </div>
+        </div>
+        <div class="row justify-content-center px-3">
+            <div class="col-lg-10 col-12 text-center">
+                <img src="backend_orders_list.png" class="img-fluid shadow-sm" style="border-radius:8px; border:1px solid #ddd; max-width:100%;" alt="Odoo Backend Orders List View showing matching date filter check"/>
+            </div>
+        </div>
+    </section>
+</div>
